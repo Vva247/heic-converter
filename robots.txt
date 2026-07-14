@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vva247.github.io/heic-converter/sitemap.xml
