@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online HEIC to JPG/PNG Converter | 100% Private</title>
+    <meta name="description" content="Convert Apple HEIC photos to JPG or PNG online directly in your browser. Totally secure and private — your images are processed locally and never uploaded to any server.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="badge">100% Offline & Private</div>
+            <h1>HEIC to JPG/PNG Converter</h1>
+            <p class="subtitle">Convert Apple HEIC images locally in your browser instantly.</p>
+
+            <!-- Зона сброса файлов -->
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-zone-content">
+                    <svg class="upload-icon" viewBox="0 0 24 24" width="48" height="48">
+                        <path fill="currentColor" d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+                    </svg>
+                    <p>Drag & drop your <b>.heic</b> image here or click to upload</p>
+                </div>
+                <input type="file" id="fileInput" accept=".heic" style="display: none;">
+            </div>
+
+            <!-- Настройки конвертации -->
+            <div class="settings-panel">
+                <span class="settings-label">Convert to:</span>
+                <label class="radio-container">
+                    <input type="radio" name="format" value="jpeg" checked>
+                    <span class="checkmark"></span> JPG
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="format" value="png">
+                    <span class="checkmark"></span> PNG
+                </label>
+            </div>
+
+            <!-- Блок превью и кнопка скачать -->
+            <div id="previewContainer" style="display: none;">
+                <h3>Preview:</h3>
+                <img id="imagePreview" src="" alt="Converted preview">
+                <button id="downloadBtn">Download Converted Image</button>
+            </div>
+
+            <!-- Индикатор загрузки (потому что HEIC "тяжелый" и конвертация занимает пару секунд) -->
+            <div id="loadingStatus" style="display: none;">
+                <div class="spinner"></div>
+                <p>Converting... Please wait (this happens entirely in your browser)</p>
+            </div>
+        </div>
+        <!-- Секция FAQ / Описание преимуществ -->
+<div class="features-section" style="margin-top: 40px; border-top: 1px solid #e2e8f0; padding-top: 30px; text-align: left;">
+    <h3 style="font-size: 16px; color: #1e293b; margin-bottom: 15px;">Why use this HEIC converter?</h3>
+    
+    <div style="margin-bottom: 15px;">
+        <h4 style="font-size: 14px; color: #475569; margin-bottom: 5px; display: flex; align-items: center; gap: 8px;">
+            🔒 100% Private & Secure
+        </h4>
+        <p style="font-size: 13px; color: #64748b; line-height: 1.5;">
+            Unlike other online converters, your photos are <b>never uploaded to any server</b>. All conversion processes happen directly inside your web browser. Your private images never leave your device.
+        </p>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <h4 style="font-size: 14px; color: #475569; margin-bottom: 5px; display: flex; align-items: center; gap: 8px;">
+            ⚡ Blazing Fast
+        </h4>
+        <p style="font-size: 13px; color: #64748b; line-height: 1.5;">
+            No upload queues or download waiting times. Since the conversion is done locally, it is near-instantaneous and saves your internet traffic.
+        </p>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <h4 style="font-size: 14px; color: #475569; margin-bottom: 5px; display: flex; align-items: center; gap: 8px;">
+            🆓 Completely Free
+        </h4>
+        <p style="font-size: 13px; color: #64748b; line-height: 1.5;">
+            No limits on file size, no watermarks, and no premium subscriptions. Convert as many Apple HEIC images to JPG or PNG as you want.
+        </p>
+    </div>
+</div>
+    </div>
+
+    <!-- Подключаем библиотеку конвертера -->
+    <script src="heic2any.min.js"></script>
+    <!-- Подключаем наш главный файл логики -->
+    <script src="app.js"></script>
+</body>
+</html>
